@@ -26,18 +26,19 @@ func quickSortMethod(list []int, left, right int) {
 
 		//交换
 		if right > left {
-			swapValue(list,left,right)
+			swapValue(list, left, right)
 		}
 	}
 
-	//循环结束后 表明 left==right
-	if list[right] < std {
-		swapValue(list,i,right)
-	} else if left > i && list[left] > std { //表示左标识移动过 且当前值比参考值要大
-		right--
-		swapValue(list,i,right)
-	}
-
+	////循环结束后 表明 left==right
+	//if list[right] < std {
+	//	swapValue(list,i,right)
+	//} else if left > i && list[left] > std { //表示左标识移动过 且当前值比参考值要大
+	//	right--
+	//	swapValue(list,i,right)
+	//}
+	//无需判断 list[left]必然会大于等于 std
+	swapValue(list, i, right)
 	quickSortMethod(list, i, right-1)
 	quickSortMethod(list, right+1, j)
 
