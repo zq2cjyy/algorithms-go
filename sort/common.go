@@ -8,6 +8,7 @@ func init() {
 	methodList = make(map[int]MethodModel)
 	methodList[1] = MethodModel{Name: "冒泡", Method: bubbleSort}
 	methodList[2] = MethodModel{Name: "快速", Method: quickSort}
+	methodList[3] = MethodModel{Name: "选择", Method: selectionSort}
 }
 
 type MethodModel struct {
