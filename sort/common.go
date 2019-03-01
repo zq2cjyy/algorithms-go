@@ -9,6 +9,7 @@ func init() {
 	methodList[1] = MethodModel{Name: "冒泡", Method: bubbleSort}
 	methodList[2] = MethodModel{Name: "快速", Method: quickSort}
 	methodList[3] = MethodModel{Name: "选择", Method: selectionSort}
+	methodList[4] = MethodModel{Name: "插入", Method: insertionSort}
 }
 
 type MethodModel struct {
