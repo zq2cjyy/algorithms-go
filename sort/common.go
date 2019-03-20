@@ -17,6 +17,14 @@ type MethodModel struct {
 	Method func([]int)
 }
 
+func GetSortMethod(id int) func([]int) {
+	model, ok := methodList[id]
+	if ok {
+		return model.Method
+	}
+	return nil
+}
+
 func printList(list []int) {
 	for _, v := range list {
 		fmt.Print(v)
